@@ -1,5 +1,6 @@
 package com.example.backend.controller;
 import com.example.backend.model.Movie;
+import com.example.backend.model.MovieDTO;
 import org.springframework.web.bind.annotation.*;
 import com.example.backend.service.MovieDbService;
 
@@ -28,14 +29,10 @@ public class MovieDbController {
     }
 
     @PostMapping
-    public Movie addMovie(@RequestBody Movie newMovie) {
+    public Movie addMovie(@RequestBody MovieDTO newMovie) {
 
         return movieDbService.addMovie(newMovie);
     }
 
-    @PutMapping("{id}")
-    public Movie addMovieById(@PathVariable String id, @RequestBody Movie movie) {
-        return movieDbService.addMovieById(id, movie);
 
-    }
 }

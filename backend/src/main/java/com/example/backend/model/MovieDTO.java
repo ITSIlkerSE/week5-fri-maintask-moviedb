@@ -10,9 +10,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 
-public class Movie {
+public class MovieDTO {
 
-    private String id;
     private String title;
     private String url;
     private String year;

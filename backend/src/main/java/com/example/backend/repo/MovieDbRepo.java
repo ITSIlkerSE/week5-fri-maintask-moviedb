@@ -22,9 +22,9 @@ public class MovieDbRepo {
     }
 
 
-    public Movie addMovie(String id, Movie newMovie) {
-        movies.put(id, newMovie);
-        return newMovie;
+    public Movie addMovie(Movie movie) {
+        movies.put(movie.getId(), movie);
+        return movie;
 
     }
 

@@ -9,14 +9,11 @@ type addMovieProps = {
 
 export default function AddMovie(props: addMovieProps) {
 
-    const [id, setId] = useState("")
     const [title, setTitle] = useState("")
     const [url, setUrl] = useState("")
     const [year, setYear] = useState("")
 
-    const onIdChange = (event: ChangeEvent<HTMLInputElement>) => {
-        setId(event.target.value)
-    }
+
 
     const onTitleChange = (event: ChangeEvent<HTMLInputElement>) => {
         setTitle(event.target.value)
@@ -35,7 +32,6 @@ export default function AddMovie(props: addMovieProps) {
 
         let newMovie = {
 
-            id: id,
             title: title,
             url: url,
             year: year
@@ -50,10 +46,7 @@ export default function AddMovie(props: addMovieProps) {
 
 
         <div className={"Inputs"}>
-            <div>
-                <p>ID</p>
-                <input placeholder={"Give movie an ID"} onChange={onIdChange} value={id}/>
-            </div>
+
             <div>
                 <p>Title</p>
                 <input placeholder={"Give movie a title"} onChange={onTitleChange} value={title}/>
