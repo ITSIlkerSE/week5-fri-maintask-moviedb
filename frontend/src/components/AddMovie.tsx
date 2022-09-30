@@ -8,7 +8,7 @@ type addMovieProps = {
 }
 
 export default function AddMovie(props: addMovieProps) {
-
+    const [id, setId] = useState("")
     const [title, setTitle] = useState("")
     const [url, setUrl] = useState("")
     const [year, setYear] = useState("")
@@ -31,7 +31,7 @@ export default function AddMovie(props: addMovieProps) {
     const onAddMovie = () => {
 
         let newMovie = {
-
+            id: id,
             title: title,
             url: url,
             year: year

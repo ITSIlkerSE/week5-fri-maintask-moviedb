@@ -3,6 +3,7 @@ import {Movie} from "../model/Movie";
 export type MoviesProps = {
 
     movie: Movie;
+    deleteMovie: (id: string) => void;
 
 }
 
@@ -17,6 +18,9 @@ return(
 
         <p><em><img src = {props.movie.url}/></em></p>
 
+
+        <button id={"button-delete"} onClick={() => {props.deleteMovie(props.movie.id)
+        ;}}>Delete</button>
 
 
     </div>

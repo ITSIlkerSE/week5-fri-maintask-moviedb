@@ -34,5 +34,8 @@ public class MovieDbController {
         return movieDbService.addMovie(newMovie);
     }
 
-
+    @DeleteMapping("{id}")
+    public void deleteMovie(@PathVariable String id){
+        movieDbService.deleteMovie(id);
+    }
 }

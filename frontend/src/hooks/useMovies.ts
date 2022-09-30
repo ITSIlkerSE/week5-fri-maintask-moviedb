@@ -25,6 +25,11 @@ export default function useMovies() {
 
     }
 
-    return {movies, addMovie}
+    const deleteMovie = (id: string) => {
+        axios.delete("/api/movie/" + id)
+            .then(getMovies)
+    }
+
+    return {movies, addMovie, deleteMovie}
 
 }

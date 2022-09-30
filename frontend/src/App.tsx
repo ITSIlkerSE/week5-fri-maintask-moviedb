@@ -6,17 +6,18 @@ import MovieDb from "./components/MovieDb";
 
 function App() {
 
-const {addMovie, movies} = useMovies()
+const {addMovie, movies, deleteMovie} = useMovies()
 
 
     return (
 <body>
 <div>
       <div className="App">
-        <h1>Ilkers Videothek</h1>
+        <h1>Movie Database</h1>
 
 </div>
-    <MovieDb movies={movies}/>
+    <MovieDb movies={movies} deleteMovie={deleteMovie}/>
+
     <AddMovie addMovie={addMovie}/>
 
 

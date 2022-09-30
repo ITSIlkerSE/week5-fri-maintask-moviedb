@@ -42,4 +42,7 @@ public class MovieDbService {
     }
 
 
+    public void deleteMovie(String id) {
+        movieDbRepo.deleteMovie(id);
+    }
 }
