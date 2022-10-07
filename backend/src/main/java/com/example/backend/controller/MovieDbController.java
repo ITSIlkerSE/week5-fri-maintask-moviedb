@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.*;
 import com.example.backend.service.MovieDbService;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("api/movie")
@@ -19,7 +20,7 @@ public class MovieDbController {
 
 
     @GetMapping("{id}")
-    public Movie getMovieById(@PathVariable String id) {
+    public Optional<Movie> getMovieById(@PathVariable String id) {
         return movieDbService.getMovieById(id);
     }
 

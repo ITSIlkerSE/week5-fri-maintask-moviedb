@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class MovieDbService {
@@ -22,12 +23,12 @@ public class MovieDbService {
         this.idService = idService;
     }
 
-    public Movie getMovieById(String id) {
-        return movieDbRepo.getMovieById(id);
+    public Optional<Movie> getMovieById(String id) {
+        return movieDbRepo.findById(id);
     }
 
     public List<Movie> getAllMovies() {
-        return movieDbRepo.getAllMovies();
+        return movieDbRepo.findAll();
     }
 
     public Movie addMovie(MovieDTO movie) {
@@ -37,12 +38,12 @@ public class MovieDbService {
                 .url(movie.getUrl())
                 .year(movie.getYear())
                 .build();
-        return movieDbRepo.addMovie(newMovie);
+        return movieDbRepo.save(newMovie);
 
     }
 
 
     public void deleteMovie(String id) {
-        movieDbRepo.deleteMovie(id);
+        movieDbRepo.deleteById(id);
     }
 }
