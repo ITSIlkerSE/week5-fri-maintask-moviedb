@@ -40,7 +40,7 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: backend-build
-          path: backend/target/moviedb.jar
+          path: backend/target/week5-fri-maintask-moviedb.jar
 
   deploy:
     runs-on: ubuntu-latest
