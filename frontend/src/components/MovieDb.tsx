@@ -22,11 +22,8 @@ export default function MovieDb(props: MovieDbProps) {
         <div className={"MovieContainer"}>
 
 
-            //Todo conditional rendering  ?    :
-
-
             <p>Search: </p><input className={"input"} onChange={(event) =>
-                setFilterText(event.target.value)}/>
+            setFilterText(event.target.value)}/>
 
 
             {result.map((movie) =>
